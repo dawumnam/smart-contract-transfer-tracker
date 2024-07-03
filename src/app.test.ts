@@ -1,3 +1,4 @@
+/* eslint-disable n/no-unsupported-features/es-builtins */
 import {EventLog} from 'web3';
 import sql from './db';
 import {deduplicateOwners, parseEvents, upsertTokenOwners} from './util';

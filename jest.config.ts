@@ -1,3 +1,4 @@
+/* eslint-disable n/no-unpublished-import */
 import type {Config} from 'jest';
 
 const config: Config = {
