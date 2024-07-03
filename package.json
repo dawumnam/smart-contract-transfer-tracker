@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.12.7",
+    "gts": "^5.3.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "build": "tsc",
+    "dev": "nodemon src/index.ts",
+    "start": "node build/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "postgres": "^3.4.4",
+    "web3": "^4.10.0"
+  }
+}

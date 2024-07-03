@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # app:
+  #   build: .
+  #   ports:
+  #     - '3001:3001'
+  #   environment:
+  #     - DATABASE_URL=postgresql://user:password@db:5432/tokendb
+  #     - INFURA_API_KEY=d508d1c622fc44ff9cb9eaad73a686d4
+  #     - CONTRACT_ADDRESS=0x2cdf540796c91ac88c13b0afb6a83a5d4bd1b54e
+  #     - START_BLOCK=4267474
+  #   depends_on:
+  #     - db
+
+  db:
+    image: postgres:13
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=tokendb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  pgdata:
